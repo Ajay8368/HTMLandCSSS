@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    line-height: 1;
+}
+
+.Main-container {
+    display: flex;
+    align-content: center;
+    /* overflow: auto; */
+}
+
+.Main-container::before {
+    content: "";
+    position: fixed;
+    background: url('../coolcity.jpg') no-repeat center center;
+    background-size: 100% 100%;
+    margin: 0px;
+    padding: 1px 2px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 8px 20px;
+    background-color: rgba(124, 209, 240, 0.65);
+    color: white;
+}
+
+.nav {
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+    justify-content: space-between;
+    padding: 0px;
+    border-radius: 4px;
+    /* border: 1px solid black; */
+}
+
+.Main-title {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* margin: auto; */
+    margin-right: 230px;
+    font-size: 1.3em;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0px 0px
+}
+
+li {
+    font-size: 18px;
+    padding: 0px 0px;
+    display: inline;
+    background-color: rgba(21, 125, 163, 0.65);
+}
+
+li input {
+    height: 20px;
+    background-color: rgba(21, 125, 163, 0.65);
+    width: 35%;
+}
+
+li input:focus {
+    background-color: beige;
+}
+
+.task-pointer {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.task-pointer:hover {
+    background-color: rgb(211, 214, 214);
+    cursor: pointer;
+}
+
+.fa-home {
+    padding: 8px;
+    width: 11%;
+    font-size: 17px;
+}
+
+.fa-home:before {
+    display: flex;
+    /* background-color: rgba(21, 125, 163, 0.65); */
+    /* border: 1px solid black; */
+    /* /* padding: 5px 10px 5px; */
+    overflow: none;
+}
+
+.fa-th-list {
+    padding: 8px;
+    width: 10%;
+    font-size: 16px;
+}
+
+.fa-th-list:before {
+    margin-bottom: 0;
+}
+
+.fa-plus {
+    background-color: rgba(21, 125, 163, 0.65);
+    padding: 5px;
+    width: 40%;
+    font-size: 12px;
+    margin: 3px;
+}
+
+.fa-user {
+    background-color: rgba(21, 125, 163, 0.65);
+    padding: 5px;
+    width: 40%;
+    font-size: 12px;
+}
+
+.fa-ellipsis-v:before {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.task-pointer .task-edit {
+    float: right;
+    display: none;
+}
+
+.task-pointer:hover .task-edit {
+    display: inline;
+}
+
+
+/* .task-pointer .task-edit:hover:before {
+    float: right;
+    visibility: visible;
+    
+    background-color: rgba( 240, 240, 240, 0.9);
+} */
+
+.Boardmenu {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    padding: 0 5px;
+    background-color: rgba( 128, 128, 128, 0.3);
+    color: white;
+}
+
+.board {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    overflow: auto;
+    overflow-y: hidden;
+    height: 99vh;
+    margin-top: 30px;
+    padding: 84px 20px 20px;
+}
+
+.task-list-wrapper {
+    flex-shrink: 0;
+    flex-basis: 240px;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.task-list {
+    display: flexbox;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: rgba(214, 214, 214, 0.9);
+    align-self: flex-start;
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.task-list-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0px;
+    justify-content: space-around;
+}
+
+.list-more-pointer {
+    margin: 0 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.message-pointer {
+    cursor: pointer;
+}
+
+.text-1 {
+    margin: 0px;
+    height: 125px;
+    width: 209px;
+}
+
+.btn1 {
+    margin: 0px 3px;
+    background-color: goldenrod;
+    padding: 0px 0px;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    height: 40px;
+    width: 80px;
+}
